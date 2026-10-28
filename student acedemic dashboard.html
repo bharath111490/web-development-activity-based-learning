@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Academic Dashboard</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+
+header{
+    background:#0066cc;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:24px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+
+.container{
+    width:95%;
+    margin:20px auto;
+}
+
+.profile{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.profile img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+
+.cards{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    color:#0066cc;
+    margin-top:10px;
+}
+
+.section{
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.section h2{
+    margin-bottom:15px;
+    color:#0066cc;
+}
+.progress-box{
+    margin-bottom:15px;
+}
+
+.progress{
+    background:#ddd;
+    border-radius:20px;
+}
+
+.progress-bar{
+    height:25px;
+    background:#28a745;
+    color:white;
+    text-align:center;
+    border-radius:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#0066cc;
+    color:white;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+.notice{
+    background:#f4f8ff;
+    border-left:5px solid #0066cc;
+    padding:15px;
+    margin:10px 0;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    background:#0066cc;
+    color:white;
+    padding:15px;
+    margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Student Dashboard</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Attendance</a>
+        <a href="#">Results</a>
+        <a href="#">Subjects</a>
+        <a href="#">Logout</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <Profile>
+
+    <div class="profile">
+
+        <div>
+            <h2>R.R.B</h2>
+            <p>Roll No: *******</p>
+            <p>Department: Cyber security</p>
+            <p>Semester: 1st</p>
+        </div>
+
+        <img src="https://via.placeholder.com/80" alt="Student">
+
+    </div>
+
+    <Cards>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>CGPA</h3>
+            <h2>8.75</h2>
+        </div>
+
+        <div class="card">
+            <h3>Attendance</h3>
+            <h2>89%</h2>
+        </div>
+
+        <div class="card">
+            <h3>Assignments</h3>
+            <h2>3</h2>
+        </div>
+
+        <div class="card">
+            <h3>Subjects</h3>
+            <h2>6</h2>
+        </div>
+
+    </div>
+
+    <Attendance>
+
+    <div class="section">
+
+        <h2>Attendance Overview</h2>
+
+        <div class="progress-box">
+            Mathematics
+            <div class="progress">
+                <div class="progress-bar" style="width:92%">92%</div>
+            </div>
+        </div>
+
+        <div class="progress-box">
+            DBMS
+            <div class="progress">
+                <div class="progress-bar" style="width:88%">88%</div>
+            </div>
+        </div>
+
+ lass="progress">
+                <div class="progress-bar" style="width:85%">85%</div>
+            </div>
+        </div>
+
+    </div>
+
+    <Results>
+
+    <div class="section">
+
+        <h2>Semester Results</h2>
+
+        <table>
+
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Grade</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Mathematics</td>
+                <td>90</td>
+                <td>A+</td>
+                <td>Pass</td>
+            </tr>
+
+            <tr>
+                <td>DBMS</td>
+                <td>85</td>
+                <td>A</td>
+                <td>Pass</td>
+            </tr>
+
+            <tr>
+                <td>Operating Systems</td>
+                <td>88</td>
+                <td>A</td>
+                <td>Pass</td>
+            </tr>
+
+            <tr>
+                <td>Web Technologies</td>
+                <td>95</td>
+                <td>O</td>
+                <td>Pass</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <Subjects>
+
+    <div class="section">
+
+        <h2>Subject Information</h2>
+
+        <table>
+
+            <tr>
+                <th>Code</th>
+                <th>Subject</th>
+                <th>Faculty</th>
+                <th>Credits</th>
+            </tr>
+
+            <tr>
+                <td>CSE301</td>
+                <td>DBMS</td>
+                <td>Dr. Rao</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>CSE302</td>
+                <td>Operating Systems</td>
+                <td>Dr. Sharma</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>CSE303</td>
+                <td>Web development</td>
+                <td>Ms. Priya</td>
+                <td>3</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <Exam Schedule>
+
+    <div class="section">
+
+        <h2>Upcoming Examination Schedule</h2>
+
+        <table>
+
+            <tr>
+                <th>Date</th>
+                <th>Subject</th>
+                <th>Time</th>
+                <th>Room</th>
+            </tr>
+
+            <tr>
+                <td>10-Dec-2026</td>
+                <td>maths</td>
+                <td>10:00 AM</td>
+                <td>A101</td>
+            </tr>
+
+            <tr>
+                <td>14-Dec-2026</td>
+                <td>python</td>
+                <td>10:00 AM</td>
+                <td>A102</td>
+            </tr>
+
+            <tr>
+                <td>18-Dec-2026</td>
+                <td>Web development</td>
+                <td>10:00 AM</td>
+                <td>A103</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <Announcements>
+
+    <div class="section">
+
+        <h2>Announcements</h2>
+
+        <div class="notice">
+            Hall tickets for Mid-Semester Exams are available.
+        </div>
+
+        <div class="notice">
+            Web Technologies Project Submission: 05-Dec-2026.
+        </div>
+
+        <div class="notice">
+            College Annual Fest on 20-Dec-2026.
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    2026 Student Academic Portal
+</footer>
+
+</body>
+</html>
