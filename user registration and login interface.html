@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Authentication Interface</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:450px;
+    background:#fff;
+    padding:28px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,0.15);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-top:12px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+textarea,
+select{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline:none;
+    border-color:#0078d7;
+    box-shadow:0 0 5px rgba(0,120,215,0.5);
+}
+
+input:invalid:focus{
+    border-color:red;
+}
+
+button{
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    background:#0078d7;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+.links{
+    text-align:center;
+    margin-top:15px;
+}
+
+.links a{
+    text-decoration:none;
+    color:#0078d7;
+}
+
+.error{
+    color:red;
+    font-size:0.85rem;
+    margin-top:3px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <Registration Form>
+    <section>
+        <h2>User Registration</h2>
+
+        <form>
+            <label for="fullname">Full Name</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                required
+                minlength="3"
+                placeholder="Enter full name">
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@email.com">
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                minlength="8"
+                placeholder="Minimum 8 characters">
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+                placeholder="Re-enter password">
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <hr style="margin:25px 0;">
+
+    <Login Form>
+    <section>
+        <h2>Login</h2>
+
+        <form>
+            <label for="loginEmail">Email</label>
+            <input
+                type="email"
+                id="loginEmail"
+                required>
+
+            <label for="loginPassword">Password</label>
+            <input
+                type="password"
+                id="loginPassword"
+                required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="links">
+            #recoveryForgot Password?</a>
+        </div>
+    </section>
+
+    <hr style="margin:25px 0;">
+
+    <Password Recover>
+    <section id="recovery">
+        <h2>Password Recovery</h2>
+
+        <form>
+            <label for="recoveryEmail">
+                Registered Email
+            </label>
+
+            <input
+                type="email"
+                id="recoveryEmail"
+                required
+                placeholder="Enter your email">
+
+            <button type="submit">
+                Reset Password
+            </button>
+        </form>
+    </section>
+
+    <hr style="margin:25px 0;">
+
+    <Profile Setup>
+    <section>
+        <h2>Profile Setup</h2>
+
+        <form>
+
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                required>
+
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                pattern="[0-9]{10}"
+                placeholder="10 digit number"
+                required>
+
+            <label for="bio">Bio</label>
+            <textarea
+                id="bio"
+                rows="4"
+                placeholder="Tell us about yourself">
+            </textarea>
+
+            <label for="country">Country</label>
+            <select id="country" required>
+                <option value="">Select Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Canada</option>
+            </select>
+
+            <button type="submit">
+                Save Profile
+            </button>
+
+        </form>
+    </section>
+
+</div>
+
+</body>
+</html>
