@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bus & Train Ticket Booking</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+header{
+    text-align:center;
+    background:#0077cc;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.booking-form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+
+.hero{
+    height:420px;
+    background:url("C:\Users\rompi\Downloads\bus ticket.jpg")
+               center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#0077cc;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+.cards{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#0077cc;
+    margin-bottom:10px;
+}
+
+/* Fare Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:white;
+}
+
+table th, table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+table th{
+    background:#0077cc;
+    color:white;
+}
+
+.seat-layout{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.seats{
+    display:grid;
+    grid-template-columns:repeat(4,50px);
+    gap:10px;
+    justify-content:center;
+}
+
+.seat{
+    width:50px;
+    height:50px;
+    background:#28a745;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.seat:hover{
+    background:#218838;
+}
+
+.booked{
+    background:#dc3545;
+}
+
+media(max-width:600px){
+    .seats{
+        grid-template-columns:repeat(4,40px);
+    }
+
+    .seat{
+        width:40px;
+        height:40px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Bus & Train Ticket Booking</h1>
+</header>
+
+<Booking Form>
+<div class="booking-form">
+
+    <div class="form-grid">
+        <div>
+            <label>Source</label>
+            <input type="text" placeholder="Enter Source">
+        </div>
+
+        <div>
+            <label>Destination</label>
+            <input type="text" placeholder="Enter Destination">
+        </div>
+
+        <div>
+            <label>Travel Date</label>
+            <input type="date">
+        </div>
+
+        <div>
+            <label>Travel Type</label>
+            <select>
+                <option>Bus</option>
+                <option>Train</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Passengers</label>
+            <input type="number" min="1" value="1">
+        </div>
+
+        <div>
+            <label>Name</label>
+            <input type="text" placeholder="Passenger Name">
+        </div>
+    </div>
+
+    <br>
+    <button>Search Tickets</button>
+</div>
+
+<Available Services>
+<h2 style="margin-top:25px;">Available Services</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Express Bus</h3>
+        <p>AC Sleeper</p>
+        <p>Departure: 08:00 AM</p>
+        <p>Arrival: 02:00 PM</p>
+        <p>Fare: ₹650</p>
+    </div>
+
+    <div class="card">
+        <h3>Super Fast Train</h3>
+        <p>AC Chair Car</p>
+        <p>Departure: 09:30 AM</p>
+        <p>Arrival: 01:30 PM</p>
+        <p>Fare: ₹800</p>
+    </div>
+
+    <div class="card">
+        <h3>Luxury Bus</h3>
+        <p>Volvo Multi-Axle</p>
+        <p>Departure: 07:00 PM</p>
+        <p>Arrival: 05:00 AM</p>
+        <p>Fare: ₹1200</p>
+    </div>
+
+</div>
+
+<Fare Information>
+<h2 style="margin-top:25px;">Fare Information</h2>
+
+<table>
+    <tr>
+        <th>Service</th>
+        <th>Class</th>
+        <th>Fare</th>
+    </tr>
+
+    <tr>
+        <td>Express Bus</td>
+        <td>AC Sleeper</td>
+        <td>₹650</td>
+    </tr>
+
+    <tr>
+        <td>Super Fast Train</td>
+        <td>Chair Car</td>
+        <td>₹800</td>
+    </tr>
+
+    <tr>
+        <td>Luxury Bus</td>
+        <td>Volvo AC</td>
+        <td>₹1200</td>
+    </tr>
+</table>
+
+<Seat Selection>
+<div class="seat-layout">
+    <h2>Select Your Seat</h2>
+    <br>
+
+    <div class="seats">
+        <div class="seat">1</div>
+        <div class="seat">2</div>
+        <div class="seat booked">3</div>
+        <div class="seat">4</div>
+
+        <div class="seat">5</div>
+        <div class="seat booked">6</div>
+        <div class="seat">7</div>
+        <div class="seat">8</div>
+
+        <div class="seat">9</div>
+        <div class="seat">10</div>
+        <div class="seat">11</div>
+        <div class="seat booked">12</div>
+    </div>
+</div>
+
+</body>
+</html>
